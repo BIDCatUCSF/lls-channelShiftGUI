@@ -7,7 +7,7 @@ function [ fileStack] = openTIFF( pathdir, fileName )
 % automatically
 warning('off', 'all'); % To ignore unknown TIFF tag.
 % find location of the file
-fileTif = strcat(pathdir,fileName);
+fileTif = fullfile(pathdir,fileName);
 
 % create a tif object and assign it
 tifObj = Tiff(fileTif,'r');

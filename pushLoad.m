@@ -9,7 +9,8 @@ function pushLoad(~,~,guiCS,buttonGroup,panelDisplay)
     %% Load the structure and assign some variables
     structParameters = getappdata(guiCS,'structParameters');
     
-    pathDir = strcat(structParameters.pathDir,'\');
+    %pathDir = strcat(structParameters.pathDir,'\');
+    pathDir = fullfile(structParameters.pathDir);
     axes1 = structParameters.axes1;
     axes2 = structParameters.axes2;
     axes3 = structParameters.axes3;
